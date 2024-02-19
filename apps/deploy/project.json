@@ -1,0 +1,24 @@
+{
+  "name": "deploy",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/deploy/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "deploy:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "deploy:build:development"
+        },
+        "production": {
+          "buildTarget": "deploy:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
