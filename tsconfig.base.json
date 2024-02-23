@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@deploy/shared/*": ["shared/src/*"],      
+      "@next/*": ["./apps/frontend/src/*"],      
     }
   },
   "exclude": ["node_modules", "tmp"]
