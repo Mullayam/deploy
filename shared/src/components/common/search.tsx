@@ -1,4 +1,5 @@
-import { Input } from "@/components/ui/input"
+"use client"
+import { Input } from "@deploy/shared/components/ui/input"
 import { useState } from "react"
 
 export function Search() {

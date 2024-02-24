@@ -6,16 +6,14 @@ type SpinnerProps = {
 }
 export function Spinner({ children, h = 12 }: SpinnerProps) {
   return (
-    <>
-      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black opacity-70">
-        {children ? (
-          <span className="text-white">{children}</span>
-        ) : (
-          <div
-            className={`h-${h} w-${h} animate-spin rounded-full border-4 border-rose-600 border-t-transparent`}
-          ></div>
-        )}
-      </div>
-    </>
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black opacity-70">
+      {children ? (
+        <span className="text-white">{children}</span>
+      ) : (
+        <div
+          className={`h-${h} w-${h} animate-spin rounded-full border-4 border-rose-600 border-t-transparent`}
+        ></div>
+      )}
+    </div>
   )
 }

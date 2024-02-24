@@ -4,21 +4,21 @@ import * as React from "react"
 import { addDays, format } from "date-fns"
 import { Calendar as CalendarIcon } from "lucide-react"
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Calendar } from "@/components/ui/calendar"
+import { cn } from "@deploy/shared/lib"
+import { Button } from "@deploy/shared/components/ui/button"
+import { Calendar } from "@deploy/shared/components/ui/calendar"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@deploy/shared/components/ui/popover"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@deploy/shared/components/ui/select"
 
 export default function DatePickerWithPresets() {
   const [date, setDate] = React.useState<Date>()

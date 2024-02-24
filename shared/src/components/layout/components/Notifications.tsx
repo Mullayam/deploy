@@ -1,3 +1,5 @@
+import Link from "next/link"
+
  
 const Notifications = () => {
   return (
@@ -28,7 +30,7 @@ const Notifications = () => {
               Notifications
             </div>
             <div>
-              <a
+              <Link
                 href="#"
                 className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
               >
@@ -63,7 +65,7 @@ const Notifications = () => {
                     a few moments ago
                   </div>
                 </div>
-              </a>
+              </Link>
               <a
                 href="#"
                 className="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"

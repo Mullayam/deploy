@@ -4,9 +4,9 @@ import { CalendarIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
+import { cn } from "@deploy/shared/lib";
+import { Button } from "@deploy/shared/components/ui/button";
+import { Calendar } from "@deploy/shared/components/ui/calendar";
 import {
   Form,
   FormControl,
@@ -15,13 +15,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
+} from "@deploy/shared/components/ui/form";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
-import { toast } from "@/components/ui/use-toast";
+} from "@deploy/shared/components/ui/popover";
+import { toast } from "@deploy/shared/components/ui/use-toast";
 
 const FormSchema = z.object({
   dob: z.date({

@@ -1,16 +1,16 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { toast } from "@/hooks/use-toast";
+import { toast } from "@next/app/hooks/use-toast";
 
 // updated
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Spinner } from "@/components/common/spinner";
-import Cookies from 'js-cookie';
-import SideAlert from "@/components/alerts/sidealert";
-interface UserAuthFormProps extends React.HTMLAttributes<HTMLFormElement> { }
+import { cn } from "@deploy/shared/lib";
+import { Button } from "@deploy/shared/components/ui/button";
+import { Input } from "@deploy/shared/components/ui/input";
+import { Label } from "@deploy/shared/components/ui/label";
+import { Spinner } from "@deploy/shared/components/common/spinner";
+
+import SideAlert from "@deploy/shared/components/alerts/sidealert";
+type UserAuthFormProps = React.HTMLAttributes<HTMLFormElement>
 
 
 export function UserAuthForm({
@@ -27,7 +27,7 @@ export function UserAuthForm({
   const [showSetupButton, setShowSetupButton] = React.useState(false);
   const emailRegex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
 
-   
+
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     try {
@@ -71,7 +71,7 @@ export function UserAuthForm({
         setShowSetupButton(true)
         toast({
           title: "Authentication Failed",
-          description:data.message,
+          description: data.message,
           variant: "default",
         })
         return;
@@ -79,7 +79,7 @@ export function UserAuthForm({
       const Data = JSON.stringify({ email: AuthCredentials.email, name: "Mullayam" })
       router.push("/mail/u")
       window.localStorage.setItem("iauth", Data);
-      Cookies.set('iauth', Data)
+    
     } catch (error: any) {
       setShowSetupButton(true)
       toast({
@@ -151,9 +151,9 @@ export function UserAuthForm({
           </Button>
         </div>
       </form>
-     { showSetupButton &&  <SideAlert text="Setup New Account" handleClickChange={() => router.push("/handler/setup")} />}      
-     
-       
+      {showSetupButton && <SideAlert text="Setup New Account" handleClickChange={() => router.push("/handler/setup")} />}
+
+
     </>
   );
 }
