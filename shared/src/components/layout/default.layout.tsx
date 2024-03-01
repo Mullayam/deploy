@@ -12,19 +12,21 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <div className="antialiased bg-transparent">
-        
+
             <BackgroundLayer />
             {/* <BackgroundLayer2 /> */}
             <DefaultLayoutHeader />
-
             <LayoutSidebar />
             <main className="p-4 md:ml-64 h-auto pt-20">
-            <FooterBanner />
-                {children}
+                <div className='rounded-sm border-t-4 border-teal-500'>
+                    {children}
+                </div>
+
+                <FooterBanner />
             </main>
             {/* <CookiesCard type='modal' /> */}
             <footer className='sticky'>
-           
+
             </footer>
         </div>
 

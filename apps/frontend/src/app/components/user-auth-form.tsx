@@ -51,7 +51,7 @@ export function UserAuthForm({
     password: "",
   })
 
-  let callbackURL = "/"
+  const callbackURL = "/"
 //   if (change.query) {
 //     callbackURL = `${change.query.callbackURL}`
 //   }

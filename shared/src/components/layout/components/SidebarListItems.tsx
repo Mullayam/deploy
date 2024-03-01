@@ -6,6 +6,7 @@ import React from 'react'
 import { snakeCase } from 'change-case'
 import { XTooltip } from '@deploy/shared/components/common/xtooltip'
 import Link from 'next/link'
+import MenuDropdown from './MenuDropdown'
 const SidebarListItems = () => {
 
   return (
@@ -101,6 +102,7 @@ const SidebarListItems = () => {
             )
           })
         }
+        <MenuDropdown/>
       </ul>
     </React.Fragment>
   )

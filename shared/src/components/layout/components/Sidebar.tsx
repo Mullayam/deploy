@@ -10,6 +10,17 @@ const LayoutSidebar = () => {
     >
       <div className="overflow-y-auto py-5 px-3 h-full ">
         <SidebarListItems />
+        <div className="mt-6">
+          <div className="p-3 bg-gray-100 rounded-lg dark:bg-gray-800">
+            <h2 className="text-sm font-medium text-gray-800 dark:text-white">
+              New feature availabel!
+            </h2>
+            <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus harum
+              officia eligendi velit.
+            </p>
+          </div>
+        </div>
       </div>
       <div className="absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-transparent z-20">
         <SidebarBottomPanel />

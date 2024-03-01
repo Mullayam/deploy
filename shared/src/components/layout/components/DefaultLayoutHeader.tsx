@@ -6,6 +6,7 @@ import Notifications from './Notifications'
 import Apps from './Apps'
 import HeaderLogo from './HeaderLogo'
 import Link from 'next/link'
+import CustomDropdown from './CustomDropdown'
 
 
 const DefaultLayoutHeader = () => {
@@ -50,8 +51,7 @@ const DefaultLayoutHeader = () => {
                     <HeaderLogo className='mr-16' />
                     <div className="ml-16 hidden md:block">
                         <div className="flex items-center px-4">
-                            <AccountSwitcher />
-                            <Search />
+                            <AccountSwitcher />                          
                             <Link
                                 href="/settings"
                                 className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary hidden lg:block md:block px-4"
@@ -64,7 +64,8 @@ const DefaultLayoutHeader = () => {
                 <div className="flex items-center lg:order-2">
                     <Notifications />
                     <Apps />
-                    {/* <LayoutUserDropDown /> */}
+                    <CustomDropdown/>
+                     <LayoutUserDropDown />
                 </div>
             </div>
         </nav>
